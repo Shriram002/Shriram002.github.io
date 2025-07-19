@@ -1,0 +1,278 @@
+/* --- Professional Redesign --- */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: #0056b3; /* A deeper, more professional blue */
+    --secondary-color: #4a90e2; /* A brighter accent blue */
+    --dark-charcoal: #2d3436;
+    --light-gray: #f7f9fc;
+    --text-color: #555;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    --card-hover-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: var(--dark-charcoal);
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Header */
+.main-header {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.main-header p {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Vision Section */
+.vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.vision-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    border-top: 5px solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-box:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.vision-box.current-state { border-color: #e74c3c; }
+.vision-box.future-state { border-color: #2ecc71; }
+
+.vision-box h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: var(--dark-charcoal);
+}
+
+/* Skills Section */
+#skills {
+    background-color: #fff;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-card {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Projects Section */
+.project-card {
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.project-card a {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Stakeholders Section */
+#stakeholders {
+    background-color: var(--light-gray);
+}
+
+.stakeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.stakeholder-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stakeholder-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.stakeholder-card h4 {
+    font-size: 1.4rem;
+    color: var(--dark-charcoal);
+    margin-top: 0;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.social-icon.linkedin {
+    background-color: #0077B5;
+}
+
+.social-icon.github {
+    background-color: #333;
+}
+
+.social-icon span {
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-charcoal);
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+
+/* Responsive Styles */
+@media(max-width: 768px) {
+    .vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+}
